@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D258BD463AD832F3806A1ECE /* Pods_RunPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5FB118CFBF43FB04BAF0A3 /* Pods_RunPlanner.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1C2ED6DB79100C8CBEAEC4C9 /* Pods-RunPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunPlanner.release.xcconfig"; path = "Target Support Files/Pods-RunPlanner/Pods-RunPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		7B5FB118CFBF43FB04BAF0A3 /* Pods_RunPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CC61692FAB2DB300C6B7EF /* RunPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E39D6EC2907FB565A9DA12 /* Pods-RunPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunPlanner.debug.xcconfig"; path = "Target Support Files/Pods-RunPlanner/Pods-RunPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D258BD463AD832F3806A1ECE /* Pods_RunPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7A15F2EBC374D694F526B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5E39D6EC2907FB565A9DA12 /* Pods-RunPlanner.debug.xcconfig */,
+				1C2ED6DB79100C8CBEAEC4C9 /* Pods-RunPlanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B1CC61602FAB2DB300C6B7EF = {
 			isa = PBXGroup;
 			children = (
 				B1CC616B2FAB2DB300C6B7EF /* RunPlanner */,
 				B1CC616A2FAB2DB300C6B7EF /* Products */,
+				4A7A15F2EBC374D694F526B8 /* Pods */,
+				CA9E07096FA2E5F1BD5F003A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CA9E07096FA2E5F1BD5F003A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B5FB118CFBF43FB04BAF0A3 /* Pods_RunPlanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1CC617C2FAB2DB600C6B7EF /* Build configuration list for PBXNativeTarget "RunPlanner" */;
 			buildPhases = (
+				7201EFCE143CD36612DAE77F /* [CP] Check Pods Manifest.lock */,
 				B1CC61652FAB2DB300C6B7EF /* Sources */,
 				B1CC61662FAB2DB300C6B7EF /* Frameworks */,
 				B1CC61672FAB2DB300C6B7EF /* Resources */,
+				89D968F05137A185E03C4DE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				B1CC616B2FAB2DB300C6B7EF /* RunPlanner */,
 			);
 			name = RunPlanner;
-			packageProductDependencies = (
-			);
 			productName = RunPlanner;
 			productReference = B1CC61692FAB2DB300C6B7EF /* RunPlanner.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7201EFCE143CD36612DAE77F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RunPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89D968F05137A185E03C4DE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RunPlanner/Pods-RunPlanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RunPlanner/Pods-RunPlanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunPlanner/Pods-RunPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1CC61652FAB2DB300C6B7EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,12 +213,14 @@
 /* Begin XCBuildConfiguration section */
 		B1CC617D2FAB2DB600C6B7EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E39D6EC2907FB565A9DA12 /* Pods-RunPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GLXJSCW83Y;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunPlanner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -171,12 +246,14 @@
 		};
 		B1CC617E2FAB2DB600C6B7EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C2ED6DB79100C8CBEAEC4C9 /* Pods-RunPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GLXJSCW83Y;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunPlanner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
